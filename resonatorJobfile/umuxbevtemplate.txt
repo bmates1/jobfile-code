@@ -1,0 +1,459 @@
+START_SECTION GENERAL
+   COMMENT                                       "umux template jobfile"
+                                                 ""
+                                                 ""
+   MACHINE_TYPE                                  "PAS5500/275"
+   RETICLE_SIZE                                  6
+   WFR_DIAMETER                                  76.200000
+   WFR_NOTCH                                     "N"
+   CELL_SIZE                                     20.000000 4.000000
+   ROUND_EDGE_CLEARANCE                          0.000000
+   FLAT_EDGE_CLEARANCE                           2.000000
+   EDGE_EXCLUSION                                0.000000
+   COVER_MODE                                    "I"
+   NUMBER_DIES                                   1 1
+   PLACEMENT_MODE                                "O"
+   MATRIX_SHIFT                                  0.000000 0.000000
+   PREALIGN_METHOD                               "STANDARD"
+   WAFER_ROTATION                                0.000000
+   COMBINE_ZERO_FIRST                            "N"
+   MARK_CLEAR_OUT                                "N"
+   MATCHING_SET_ID                               "DEFAULT"
+END_SECTION
+
+
+START_SECTION ALIGNMENT_MARK
+   MARK_ID                                       "1"
+   IMAGE_ID                                      "PM"
+   MARK_EDGE_CLEARANCE                           "L"
+   WAFER_SIDE                                    "A"
+   MARK_LOCATION                                 -32.500000 0.000000
+END_SECTION
+
+START_SECTION ALIGNMENT_MARK
+   MARK_ID                                       "2"
+   IMAGE_ID                                      "PM"
+   MARK_EDGE_CLEARANCE                           "L"
+   WAFER_SIDE                                    "A"
+   MARK_LOCATION                                 32.500000 0.000000
+END_SECTION
+
+
+START_SECTION WFR_ALIGN_STRATEGY
+   STRATEGY_ID                                   "MAIN"
+   WAFER_ALIGNMENT_METHOD                        "T"
+   NR_OF_MARKS_TO_USE                            2
+   NR_OF_X_MARKS_TO_USE                          2
+   NR_OF_Y_MARKS_TO_USE                          2
+   MIN_MARK_DISTANCE_COARSE                      20.000000
+   MIN_MARK_DISTANCE                             40
+   MAX_80_88_MARK_SHIFT                          0.500000
+   MAX_MARK_RESIDUE                              200.000000
+   SPM_MARK_SCAN                                 "S"
+   CORR_WAFER_GRID                               "Default"
+   ERR_DETECTION_88_8                            "M"
+   GRID_OPTIMISATION_ALGORITHM                   "N"
+   FLYER_REMOVAL_THRESHOLD                       0.000000
+   ALIGNMENT_MONITORING                          "D"
+END_SECTION
+
+
+START_SECTION MARK_ALIGNMENT
+   STRATEGY_ID                                   "MAIN"
+   MARK_ID                                       "1"
+   GLBL_MARK_USAGE                               "A"
+   MARK_PREFERENCE                               "P"
+END_SECTION
+
+START_SECTION MARK_ALIGNMENT
+   STRATEGY_ID                                   "MAIN"
+   MARK_ID                                       "2"
+   GLBL_MARK_USAGE                               "A"
+   MARK_PREFERENCE                               "P"
+END_SECTION
+
+
+START_SECTION IMAGE_DEFINITION
+   IMAGE_ID                                      "PM"
+   RETICLE_ID                                    "4501226*"
+   IMAGE_SIZE                                    2.050000 2.050000
+   IMAGE_SHIFT                                   0.000000 0.000000
+   MASK_SIZE                                     2.050000 2.050000
+   MASK_SHIFT                                    0.000000 0.000000
+   BASE_IMAGE_ID                                 "PM"
+   VARIANT_ID                                    ""
+END_SECTION
+
+START_SECTION IMAGE_DEFINITION
+   IMAGE_ID                                      "SPM-X"
+   RETICLE_ID                                    "4501226*"
+   IMAGE_SIZE                                    3.640000 0.360000
+   IMAGE_SHIFT                                   -14.600000 -14.600000
+   MASK_SIZE                                     3.640000 0.500000
+   MASK_SHIFT                                    -14.600000 -14.600000
+   BASE_IMAGE_ID                                 "SPM-X"
+   VARIANT_ID                                    ""
+END_SECTION
+
+START_SECTION IMAGE_DEFINITION
+   IMAGE_ID                                      "SPM-X_S"
+   RETICLE_ID                                    "4501226*"
+   IMAGE_SIZE                                    3.640000 0.360000
+   IMAGE_SHIFT                                   -14.600000 14.600000
+   MASK_SIZE                                     3.640000 0.500000
+   MASK_SHIFT                                    -14.600000 14.600000
+   BASE_IMAGE_ID                                 "SPM-X"
+   VARIANT_ID                                    "S"
+END_SECTION
+
+START_SECTION IMAGE_DEFINITION
+   IMAGE_ID                                      "SPM-Y"
+   RETICLE_ID                                    "4501226*"
+   IMAGE_SIZE                                    0.360000 3.640000
+   IMAGE_SHIFT                                   14.600000 -14.600000
+   MASK_SIZE                                     0.500000 3.640000
+   MASK_SHIFT                                    14.600000 -14.600000
+   BASE_IMAGE_ID                                 "SPM-Y"
+   VARIANT_ID                                    ""
+END_SECTION
+
+START_SECTION IMAGE_DEFINITION
+   IMAGE_ID                                      "SPM-Y_S"
+   RETICLE_ID                                    "4501226*"
+   IMAGE_SIZE                                    0.360000 3.640000
+   IMAGE_SHIFT                                   14.600000 14.600000
+   MASK_SIZE                                     0.500000 3.640000
+   MASK_SHIFT                                    14.600000 14.600000
+   BASE_IMAGE_ID                                 "SPM-Y"
+   VARIANT_ID                                    "S"
+END_SECTION
+
+START_SECTION IMAGE_DEFINITION
+   IMAGE_ID                                      "XPA"
+   RETICLE_ID                                    "4501226*"
+   IMAGE_SIZE                                    2.680000 2.680000
+   IMAGE_SHIFT                                   0.000000 -14.600000
+   MASK_SIZE                                     2.680000 2.680000
+   MASK_SHIFT                                    0.000000 -14.600000
+   BASE_IMAGE_ID                                 "XPA"
+   VARIANT_ID                                    ""
+END_SECTION
+
+START_SECTION IMAGE_DEFINITION
+   IMAGE_ID                                      "XPA-X"
+   RETICLE_ID                                    "4501226*"
+   IMAGE_SIZE                                    1.560000 0.360000
+   IMAGE_SHIFT                                   -14.600000 -29.200000
+   MASK_SIZE                                     1.560000 0.500000
+   MASK_SHIFT                                    -14.600000 -29.200000
+   BASE_IMAGE_ID                                 "XPA-X"
+   VARIANT_ID                                    ""
+END_SECTION
+
+START_SECTION IMAGE_DEFINITION
+   IMAGE_ID                                      "XPA-X_S"
+   RETICLE_ID                                    "4501226*"
+   IMAGE_SIZE                                    1.560000 0.360000
+   IMAGE_SHIFT                                   -14.600000 29.200000
+   MASK_SIZE                                     1.560000 0.500000
+   MASK_SHIFT                                    -14.600000 29.200000
+   BASE_IMAGE_ID                                 "XPA-X"
+   VARIANT_ID                                    "S"
+END_SECTION
+
+START_SECTION IMAGE_DEFINITION
+   IMAGE_ID                                      "XPA-Y"
+   RETICLE_ID                                    "4501226*"
+   IMAGE_SIZE                                    0.360000 1.560000
+   IMAGE_SHIFT                                   14.600000 -29.200000
+   MASK_SIZE                                     0.500000 1.560000
+   MASK_SHIFT                                    14.600000 -29.200000
+   BASE_IMAGE_ID                                 "XPA-Y"
+   VARIANT_ID                                    ""
+END_SECTION
+
+START_SECTION IMAGE_DEFINITION
+   IMAGE_ID                                      "XPA-Y_S"
+   RETICLE_ID                                    "4501226*"
+   IMAGE_SIZE                                    0.360000 1.560000
+   IMAGE_SHIFT                                   14.600000 29.200000
+   MASK_SIZE                                     0.500000 1.560000
+   MASK_SHIFT                                    14.600000 29.200000
+   BASE_IMAGE_ID                                 "XPA-Y"
+   VARIANT_ID                                    "S"
+END_SECTION
+
+START_SECTION IMAGE_DEFINITION
+   IMAGE_ID                                      "XPA_S"
+   RETICLE_ID                                    "4501226*"
+   IMAGE_SIZE                                    2.680000 2.680000
+   IMAGE_SHIFT                                   0.000000 14.600000
+   MASK_SIZE                                     2.680000 2.680000
+   MASK_SHIFT                                    0.000000 14.600000
+   BASE_IMAGE_ID                                 "XPA"
+   VARIANT_ID                                    "S"
+END_SECTION
+
+START_SECTION IMAGE_DEFINITION
+   IMAGE_ID                                      "EP1"
+   RETICLE_ID                                    "QSPFLOOD"
+   IMAGE_SIZE                                    25.000000 25.000000
+   IMAGE_SHIFT                                   0.000000 40.000000
+   MASK_SIZE                                     25.000000 25.000000
+   MASK_SHIFT                                    0.000000 40.000000
+   VARIANT_ID                                    ""
+END_SECTION
+
+START_SECTION IMAGE_DEFINITION
+   IMAGE_ID                                      "EP2"
+   RETICLE_ID                                    "QSPFLOOD"
+   IMAGE_SIZE                                    25.000000 25.000000
+   IMAGE_SHIFT                                   0.000000 40.000000
+   MASK_SIZE                                     25.000000 25.000000
+   MASK_SHIFT                                    0.000000 40.000000
+   VARIANT_ID                                    ""
+END_SECTION
+
+
+START_SECTION INSTANCE_DEFINITION
+   INSTANCE_ID                                   "DEFAULT"
+END_SECTION
+
+
+START_SECTION IMAGE_DISTRIBUTION
+   IMAGE_ID                                      "EP1"
+   INSTANCE_ID                                   "<DEFAULT>"
+   CELL_SELECTION                                "-1" "5"
+   DISTRIBUTION_ACTION                           "I"
+   OPTIMIZE_ROUTE                                "N"
+   IMAGE_CELL_SHIFT                              0.000000 1.500000
+END_SECTION
+
+START_SECTION IMAGE_DISTRIBUTION
+   IMAGE_ID                                      "EP1"
+   INSTANCE_ID                                   "<DEFAULT>"
+   CELL_SELECTION                                "1" "-5"
+   DISTRIBUTION_ACTION                           "I"
+   OPTIMIZE_ROUTE                                "N"
+   IMAGE_CELL_SHIFT                              0.000000 -1.500000
+END_SECTION
+
+START_SECTION IMAGE_DISTRIBUTION
+   IMAGE_ID                                      "EP2"
+   INSTANCE_ID                                   "<DEFAULT>"
+   CELL_SELECTION                                "1" "5"
+   DISTRIBUTION_ACTION                           "I"
+   OPTIMIZE_ROUTE                                "N"
+   IMAGE_CELL_SHIFT                              0.000000 1.500000
+END_SECTION
+
+START_SECTION IMAGE_DISTRIBUTION
+   IMAGE_ID                                      "EP2"
+   INSTANCE_ID                                   "<DEFAULT>"
+   CELL_SELECTION                                "-1" "-5"
+   DISTRIBUTION_ACTION                           "I"
+   OPTIMIZE_ROUTE                                "N"
+   IMAGE_CELL_SHIFT                              0.000000 -1.500000
+END_SECTION
+
+
+START_SECTION LAYER_DEFINITION
+   LAYER_NO                                      0
+   LAYER_ID                                      "PM"
+   WAFER_SIDE                                    "A"
+END_SECTION
+
+START_SECTION LAYER_DEFINITION
+   LAYER_NO                                      1
+   LAYER_ID                                      "BEV"
+   WAFER_SIDE                                    "A"
+END_SECTION
+
+
+START_SECTION MARKS_SELECTION
+   LAYER_ID                                      "PM"
+   MARK_ID                                       "1"
+   GLBL_MARK_USAGE                               "E"
+END_SECTION
+
+START_SECTION MARKS_SELECTION
+   LAYER_ID                                      "PM"
+   MARK_ID                                       "2"
+   GLBL_MARK_USAGE                               "E"
+END_SECTION
+
+START_SECTION MARKS_SELECTION
+   LAYER_ID                                      "BEV"
+   MARK_ID                                       "1"
+   GLBL_MARK_USAGE                               "N"
+END_SECTION
+
+START_SECTION MARKS_SELECTION
+   LAYER_ID                                      "BEV"
+   MARK_ID                                       "2"
+   GLBL_MARK_USAGE                               "N"
+END_SECTION
+
+
+START_SECTION STRATEGY_SELECTION
+   LAYER_ID                                      "BEV"
+   STRATEGY_ID                                   "MAIN"
+   STRATEGY_USAGE                                "A"
+END_SECTION
+
+
+START_SECTION PROCESS_DATA
+   LAYER_ID                                      "PM"
+   LENS_REDUCTION                                5
+   CALIBRATION                                   "N"
+   OPTICAL_PREALIGNMENT                          "N"
+   GLBL_WFR_ALIGNMENT                            "N"
+   COO_REDUCTION                                 "D"
+   MIN_NUMBER_PULSES_IN_SLIT                     "D"
+   MIN_NUMBER_PULSES                             21
+   SKIP_COARSE_WAFER_ALIGN                       "N"
+   REDUCE_RETICLE_ALIGN                          "N"
+   REDUCE_RA_DRIFT                               5.000000
+   REDUCE_RA_INTERVAL                            2
+   RET_COOL_CORR                                 "D"
+   RET_COOL_TIME                                 0
+   RET_COOL_START_ON_LOAD                        "Y"
+   RET_COOL_USAGE                                "W"
+   GLBL_RTCL_ALIGNMENT                           "N"
+   GLBL_OVERLAY_ENHANCEMENT                      "N"
+   GLBL_SYM_ALIGNMENT                            "N"
+   LAYER_SHIFT                                   0.000000 0.000000
+   CORR_INTER_FLD_EXPANSION                      0.000000 0.000000
+   CORR_INTER_FLD_NONORTHO                       0.000000
+   CORR_INTER_FLD_ROTATION                       0.000000
+   CORR_INTER_FLD_TRANSLATION                    0.000000 0.000000
+   CORR_INTRA_FLD_MAGNIFICATION                  0.000000
+   CORR_INTRA_FLD_ROTATION                       0.000000
+   CORR_INTRA_FLD_TRANSLATION                    0.000000 0.000000
+   CORR_INTRA_FLD_ASYM_ROTATION                  0.000000
+   CORR_INTRA_FLD_ASYM_MAGN                      0.000000
+   CORR_PREALIGN_ROTATION                        0.000000
+   CORR_PREALIGN_TRANSLATION                     0.000000 0.000000
+   CORR_80_88_MARK_SHIFT                         0.000000 0.000000 0.000000 0.000000
+   CORR_LENS_HEATING                             1.000000
+   NUMERICAL_APERTURE                            -1.000000
+   SIGMA_INNER                                   -1.000000
+   SIGMA_OUTER                                   -1.000000
+   RTCL_CHECK_SURFACES                           "B"
+   RTCL_CHECK_LIMITS_UPPER                       50000 50000 50000
+   RTCL_CHECK_LIMITS_LOWER                       50000 50000 50000
+   REALIGNMENT_METHOD                            "D"
+   IMAGE_ORDER_OPTIMISATION                      "Y"
+   RETICLE_ALIGNMENT                             "T"
+   USE_DEFAULT_RETICLE_ALIGNMENT_METHOD          "N"
+   CRITICAL_PERCENTAGE                           83
+   SHARE_LEVEL_INFO                              "N"
+   FOCUS_EDGE_CLEARANCE                          3.000000
+   INLINE_Q_ABOVE_P_CALIBRATION                  "D"
+   SHIFTED_MEASUREMENT_SCANS                     "N"
+   FOCUS_MONITORING                              "D"
+   FOCUS_MONITORING_SCANNER                      "D"
+   DYN_PERF_MONITORING                           "D"
+   FORCE_MEANDER_ENABLED                         "N"
+END_SECTION
+
+START_SECTION PROCESS_DATA
+   LAYER_ID                                      "BEV"
+   LENS_REDUCTION                                5
+   CALIBRATION                                   "N"
+   OPTICAL_PREALIGNMENT                          "Y"
+   OPT_PREALIGN_MARKS                            "1" "2"
+   GLBL_WFR_ALIGNMENT                            "N"
+   COO_REDUCTION                                 "D"
+   MIN_NUMBER_PULSES_IN_SLIT                     "D"
+   MIN_NUMBER_PULSES                             21
+   SKIP_COARSE_WAFER_ALIGN                       "N"
+   REDUCE_RETICLE_ALIGN                          "N"
+   REDUCE_RA_DRIFT                               5.000000
+   REDUCE_RA_INTERVAL                            2
+   RET_COOL_CORR                                 "D"
+   RET_COOL_TIME                                 0
+   RET_COOL_START_ON_LOAD                        "Y"
+   RET_COOL_USAGE                                "W"
+   GLBL_RTCL_ALIGNMENT                           "N"
+   GLBL_OVERLAY_ENHANCEMENT                      "N"
+   GLBL_SYM_ALIGNMENT                            "Y"
+   LAYER_SHIFT                                   0.000000 0.000000
+   CORR_WAFER_GRID                               "Default"
+   NR_OF_MARKS_TO_USE                            2
+   MIN_MARK_DISTANCE_COARSE                      20.000000
+   MIN_MARK_DISTANCE                             40
+   MAX_80_88_SHIFT                               0.500000
+   MAX_MARK_RESIDUE                              200.000000
+   SPM_MARK_SCAN                                 "S"
+   ERR_DETECTION_88_8                            "M"
+   CORR_INTER_FLD_EXPANSION                      0.000000 0.000000
+   CORR_INTER_FLD_NONORTHO                       0.000000
+   CORR_INTER_FLD_ROTATION                       0.000000
+   CORR_INTER_FLD_TRANSLATION                    0.000000 0.000000
+   CORR_INTRA_FLD_MAGNIFICATION                  0.000000
+   CORR_INTRA_FLD_ROTATION                       0.000000
+   CORR_INTRA_FLD_TRANSLATION                    0.000000 0.000000
+   CORR_INTRA_FLD_ASYM_ROTATION                  0.000000
+   CORR_INTRA_FLD_ASYM_MAGN                      0.000000
+   CORR_PREALIGN_ROTATION                        0.000000
+   CORR_PREALIGN_TRANSLATION                     0.000000 0.000000
+   CORR_80_88_MARK_SHIFT                         0.000000 0.000000 0.000000 0.000000
+   CORR_LENS_HEATING                             1.000000
+   NUMERICAL_APERTURE                            -1.000000
+   SIGMA_INNER                                   -1.000000
+   SIGMA_OUTER                                   -1.000000
+   RTCL_CHECK_SURFACES                           "B"
+   RTCL_CHECK_LIMITS_UPPER                       50000 50000 50000
+   RTCL_CHECK_LIMITS_LOWER                       50000 50000 50000
+   ALIGNMENT_METHOD                              "T"
+   REALIGNMENT_METHOD                            "D"
+   IMAGE_ORDER_OPTIMISATION                      "Y"
+   RETICLE_ALIGNMENT                             "T"
+   USE_DEFAULT_RETICLE_ALIGNMENT_METHOD          "N"
+   CRITICAL_PERCENTAGE                           83
+   SHARE_LEVEL_INFO                              "N"
+   FOCUS_EDGE_CLEARANCE                          3.000000
+   INLINE_Q_ABOVE_P_CALIBRATION                  "M"
+   SHIFTED_MEASUREMENT_SCANS                     "N"
+   FOCUS_MONITORING                              "D"
+   FOCUS_MONITORING_SCANNER                      "D"
+   DYN_PERF_MONITORING                           "D"
+   FORCE_MEANDER_ENABLED                         "N"
+END_SECTION
+
+
+START_SECTION RETICLE_DATA
+   LAYER_ID                                      "PM"
+   IMAGE_ID                                      "PM"
+   IMAGE_USAGE                                   "Y"
+   RETICLE_ID                                    "ALIGN"
+   IMAGE_SIZE                                    2.050000 2.050000
+   IMAGE_SHIFT                                   0.000000 0.000000
+   MASK_SIZE                                     2.050000 2.050000
+   MASK_SHIFT                                    0.000000 0.000000
+   ENERGY_ACTUAL                                 150.000000
+   FOCUS_ACTUAL                                  0.000000
+   FOCUS_TILT                                    0.000000 0.000000
+   NUMERICAL_APERTURE                            -1.000000
+   SIGMA_INNER                                   -1.000000
+   SIGMA_OUTER                                   -1.000000
+   IMAGE_EXPOSURE_ORDER                          0
+   LITHOGRAPHY_PROCESS                           "Default"
+   IMAGE_INTRA_FLD_COR_TRANS                     0.000000 0.000000
+   IMAGE_INTRA_FLD_COR_ROT                       0.000000
+   IMAGE_INTRA_FLD_COR_ASYM_ROT                  0.000000
+   IMAGE_INTRA_FLD_COR_MAG                       0.000000
+   IMAGE_INTRA_FLD_COR_ASYM_MAG                  0.000000
+   LEVEL_METHOD_Z                                "D"
+   LEVEL_METHOD_RX                               "D"
+   LEVEL_METHOD_RY                               "D"
+   DIE_SIZE_DEPENDENCY                           "N"
+   ENABLE_EFESE                                  "N"
+   CD_FEC_MODE                                   "N"
+   DOSE_CORRECTION                               "N"
+   DOSE_CRITICAL_IMAGE                           "Y"
+   GLOBAL_LEVEL_POINT_1                          0.000000 0.000000
+   GLOBAL_LEVEL_POINT_2                          0.000000 0.000000
+   GLOBAL_LEVEL_POINT_3                          0.000000 0.000000
+END_SECTION
